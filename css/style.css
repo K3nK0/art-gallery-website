@@ -4,4 +4,33 @@
   margin: 0;
 }
 
+.hero {
+  position: relative;
+}
+
+.hero-img-tablet, .hero-img-mobile {
+  display: none;
+}
+
+.img-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.img-hero-left {
+  background: #151515;
+}
+
+.txt-hero {
+  position: absolute;
+  top: 190px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10vw;
+  margin: 0 15vw;
+}
+.txt-hero p {
+  width: 350px;
+}
+
 /*# sourceMappingURL=style.css.map */

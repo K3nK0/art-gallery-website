@@ -4,3 +4,35 @@
     margin: 0;
 }
 
+.hero {
+    position: relative;
+} 
+
+
+.hero-img-tablet, .hero-img-mobile {
+    display: none;
+}
+
+.img-hero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.img-hero-left {
+    background: $color-black;
+}
+
+.txt-hero {
+    position: absolute;
+    // width: 100vw;
+    top: 190px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
+    margin: 0 15vw;
+
+    p {
+        // justify-self: end;
+        width: 350px;
+    }
+}
