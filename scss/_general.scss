@@ -24,15 +24,56 @@
 
 .txt-hero {
     position: absolute;
-    // width: 100vw;
     top: 190px;
     display: flex;
     justify-content: space-between;
-    gap: 10vw;
-    margin: 0 15vw;
+    // gap: 320px;
+    gap: clamp(20px, 18vw, 320px);
+    left: 50%;
+    transform: translateX(-50%);
 
     p {
-        // justify-self: end;
         width: 350px;
+        @extend %bodyM;
+        margin-bottom: 64px;
+    }
+
+    h1 {
+        @extend %headingXL;
+        color: $color-white;
+        width: 500px;
+        mix-blend-mode: difference;
+    }
+
+    .btn-location {
+        position: relative;
+        width: 260px;
+        padding: 24px 0 24px 32px;
+        text-align: left;
+        color: $color-white;
+        font-family: "Big Shoulders Display";
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 3.636px;
+        background: $color-black;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            height: 100%;
+            width: 56px;
+            right: 0;
+            top: 0;
+            background: $color-brown;
+
+            img {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 }
