@@ -6,6 +6,7 @@
 
 .hero {
     position: relative;
+    width: 100vw;
 } 
 
 
@@ -15,7 +16,8 @@
 
 .img-hero {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 540px 1fr;
+    width: 100%;
 }
 
 .img-hero-left {
@@ -27,10 +29,10 @@
     top: 190px;
     display: flex;
     justify-content: space-between;
-    // gap: 320px;
     gap: clamp(20px, 18vw, 320px);
     left: 50%;
     transform: translateX(-50%);
+    max-width: 1110px;
 
     p {
         width: 350px;
@@ -42,6 +44,7 @@
         @extend %headingXL;
         color: $color-white;
         width: 500px;
+        min-width: 450px;
         mix-blend-mode: difference;
     }
 
@@ -74,6 +77,101 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
+        }
+
+        &:hover {
+            background: $color-brown;
+
+            span {
+                background: $color-black;
+            }
+        }
+    }
+}
+
+// HERO TABLET
+
+@media (max-width: 1190px) {
+    .img-hero {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img-hero-left {
+        display: none;
+    }
+
+    .hero-img-desktop, .hero-img-mobile {
+        display: none;
+    }
+
+    .hero-img-tablet {
+        display: block;
+    }
+
+    .txt-hero {
+        position: absolute;
+        top: 145px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 48px;
+        left: 390px;
+        transform: translateX(0);
+
+        h1 {
+            font-size: 70px;
+            line-height: 65px;
+            color: $color-black;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 48px;
+        }
+    }
+}
+
+// HERO MOBILE
+
+@media (max-width: 750px) {
+
+    .img-hero {
+        display: block;
+        grid-template-columns: 1fr;
+    }
+
+    .img-hero-right {
+        display: none;
+    }
+
+    .hero-img-desktop, .hero-img-tablet {
+        display: none;
+    }
+
+    .hero-img-mobile {
+        display: block;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .txt-hero {
+        position: relative;
+        top: 0px;
+        left: 0;
+        display: block;
+        margin-left: 16px;
+
+        h1 {
+            font-size: 60px;
+            line-height: 55px;
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 32px;
         }
     }
 }

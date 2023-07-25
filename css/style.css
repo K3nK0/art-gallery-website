@@ -23,6 +23,7 @@
 
 .hero {
   position: relative;
+  width: 100vw;
 }
 
 .hero-img-tablet, .hero-img-mobile {
@@ -31,7 +32,8 @@
 
 .img-hero {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 540px 1fr;
+  width: 100%;
 }
 
 .img-hero-left {
@@ -46,6 +48,7 @@
   gap: clamp(20px, 18vw, 320px);
   left: 50%;
   transform: translateX(-50%);
+  max-width: 1110px;
 }
 .txt-hero p {
   width: 350px;
@@ -54,6 +57,7 @@
 .txt-hero h1 {
   color: #FFFFFF;
   width: 500px;
+  min-width: 450px;
   mix-blend-mode: difference;
 }
 .txt-hero .btn-location {
@@ -84,6 +88,81 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.txt-hero .btn-location:hover {
+  background: #D5966C;
+}
+.txt-hero .btn-location:hover span {
+  background: #151515;
+}
+
+@media (max-width: 1190px) {
+  .img-hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .img-hero-left {
+    display: none;
+  }
+  .hero-img-desktop, .hero-img-mobile {
+    display: none;
+  }
+  .hero-img-tablet {
+    display: block;
+  }
+  .txt-hero {
+    position: absolute;
+    top: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+    left: 390px;
+    transform: translateX(0);
+  }
+  .txt-hero h1 {
+    font-size: 70px;
+    line-height: 65px;
+    color: #151515;
+  }
+  .txt-hero p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 750px) {
+  .img-hero {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+  .img-hero-right {
+    display: none;
+  }
+  .hero-img-desktop, .hero-img-tablet {
+    display: none;
+  }
+  .hero-img-mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .txt-hero {
+    position: relative;
+    top: 0px;
+    left: 0;
+    display: block;
+    margin-left: 16px;
+  }
+  .txt-hero h1 {
+    font-size: 60px;
+    line-height: 55px;
+    margin-bottom: 32px;
+  }
+  .txt-hero p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
