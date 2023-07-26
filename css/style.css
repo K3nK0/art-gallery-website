@@ -7,12 +7,21 @@
   color: #151515;
 }
 
-.txt-hero p {
+.header-gallery-txt p, .txt-hero p {
   font-family: "Outfit";
   font-size: 22px;
   font-weight: 300;
   line-height: 32px;
   color: #444;
+}
+
+.header-gallery-txt h2 {
+  font-family: "Big Shoulders Display";
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #151515;
 }
 
 *, ::before, ::after {
@@ -26,7 +35,7 @@
   width: 100vw;
 }
 
-.hero-img-tablet, .hero-img-mobile {
+.img-tablet, .img-mobile {
   display: none;
 }
 
@@ -120,10 +129,10 @@
   .img-hero-left {
     display: none;
   }
-  .hero-img-desktop, .hero-img-mobile {
+  .img-desktop, .img-mobile {
     display: none;
   }
-  .hero-img-tablet {
+  .img-tablet {
     display: block;
   }
   .txt-hero {
@@ -155,10 +164,10 @@
   .img-hero-right {
     display: none;
   }
-  .hero-img-desktop, .hero-img-tablet {
+  .img-desktop, .img-tablet {
     display: none;
   }
-  .hero-img-mobile {
+  .img-mobile {
     display: block;
     width: 100%;
     margin-bottom: 32px;
@@ -179,6 +188,51 @@
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 32px;
+  }
+}
+.gallery {
+  position: relative;
+  margin: 180px auto;
+  max-width: 1110px;
+}
+
+.header-gallery {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 125px;
+}
+
+.header-gallery-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+@media (max-width: 1190px) {
+  .gallery {
+    margin: 120px 40px;
+  }
+}
+@media (max-width: 750px) {
+  .gallery {
+    margin: 120px 20px;
+  }
+  .header-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .header-gallery-txt {
+    grid-area: 2/1/3/1;
+    gap: 21px;
+  }
+  .header-gallery-txt h2 {
+    font-size: 50px;
+    line-height: 45px;
+  }
+  .header-gallery-txt p {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
