@@ -65,15 +65,39 @@
   width: 260px;
   padding: 24px 0 24px 32px;
   text-align: left;
+  content: "";
+  overflow: hidden;
+}
+.txt-hero .btn-location:hover a ::before {
+  transform: translateX(204px);
+}
+.txt-hero .btn-location a {
+  text-decoration: none;
   color: #FFFFFF;
   font-family: "Big Shoulders Display";
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 3.636px;
-  background: #151515;
-  border: none;
   text-transform: uppercase;
-  cursor: pointer;
+}
+.txt-hero .btn-location a ::before {
+  content: "";
+  position: absolute;
+  width: 204px;
+  height: 100%;
+  left: -204px;
+  background: #151515;
+  z-index: -1;
+  transition: transform 0.3s cubic-bezier(0.39, 1.55, 0.43, 0.79);
+}
+.txt-hero .btn-location a ::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 100%;
+  left: -204px;
+  background: #D5966C;
+  z-index: -2;
 }
 .txt-hero .btn-location span {
   position: absolute;
@@ -81,19 +105,12 @@
   width: 56px;
   right: 0;
   top: 0;
-  background: #D5966C;
 }
 .txt-hero .btn-location span img {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.txt-hero .btn-location:hover {
-  background: #D5966C;
-}
-.txt-hero .btn-location:hover span {
-  background: #151515;
 }
 
 @media (max-width: 1190px) {
