@@ -210,7 +210,7 @@
 .header-gallery {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 125px;
+    gap: 68px;
 }
 
 .header-gallery-txt {
@@ -258,5 +258,137 @@
             font-size: 18px;
             line-height: 28px;
         }
+    }
+}
+
+.body-gallery {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 635px 1fr;
+    gap: 30px;
+}
+
+.body-gallery-left {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.body-gallery-right {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 30px;
+}
+
+.body-gallery-top-right {
+    img {
+        object-fit: cover;
+    }
+}
+
+.body-gallery-bottom-right {
+    background: $color-black;
+    padding: 65px 48px;
+
+    h2 {
+        @extend %headingM;
+        color: $color-white;
+        margin-bottom: 32px;
+    }
+
+    p {
+        @extend %bodyM;
+        color: $color-white;
+    }
+}
+
+@media (max-width: 1190px) {
+    .body-gallery {
+        margin-top: 11px;
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+    }
+
+    .body-gallery-left {
+        position: relative;
+        height: auto;
+        width: auto;
+    
+        img {
+            height: auto;
+            width: auto;
+            object-fit: cover;
+        }
+    }
+
+    .body-gallery-right {
+        display: grid;
+        grid-template-rows: 313px 1fr;
+        gap: 11px;
+    }
+
+    .body-gallery-top-right {
+        img {
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .body-gallery-bottom-right {
+        padding: 85px 28px;
+    
+        h2 {
+            font-size: 50px;
+            margin-bottom: 24px;
+            line-height: 45px;
+        }
+    
+        p {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .body-gallery {
+        margin-top: 32px;
+        grid-template-columns: 335px;
+        gap: 16px;
+    }
+
+    .body-gallery-left {
+        width: 100%;
+    
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .body-gallery-right {
+        display: grid;
+        grid-template-rows: 335px;
+        gap: 16px;
+    }
+
+    .body-gallery-top-right {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .body-gallery-bottom-right {
+        padding: 48px 24px;
     }
 }
