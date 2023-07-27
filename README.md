@@ -9,7 +9,7 @@ This is a solution to the [Art gallery website challenge on Frontend Mentor](htt
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/art-gallery-website-with-grid-flex-and-sass-GDNMF_6Q1t)
 - Live Site URL: [Add live site URL here](https://art-gallery-website-swart.vercel.app/index.html)
 
 ## My process
