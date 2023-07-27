@@ -1,3 +1,11 @@
+.img-tablet, .img-mobile {
+    display: none;
+}
+
+.img-desktop {
+    display: block;
+}
+
 .container-map {
     width: 100%;
 
@@ -62,5 +70,150 @@
         font-weight: 800;
         letter-spacing: 3.636px;
         text-transform: uppercase;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-desktop, .img-mobile {
+        display: none;
+    }
+
+    .img-tablet {
+        display: block;
+    }
+
+    .btn-back {
+        left: 40px;
+    }
+
+    .container-map {
+        height: 600px;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .img-desktop, .img-tablet {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+    }
+
+    .btn-back {
+        left: 0;
+    }
+}
+
+// SECTION LOCATION
+
+.our-location {
+    padding: 104px 165px;
+    background: $color-black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.location-left {
+    h2 {
+        @extend %headingM;
+        color: $color-white;
+        
+        span {
+            display: block;
+        }
+    }
+}
+
+.location-right {
+    h3 {
+        color: $color-brown;
+        @extend %headingS;
+        margin-bottom: 24px;
+    }
+
+    p {
+        @extend %bodyM;
+        color: $color-white;
+
+        &:nth-child(2) {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .our-location {
+        padding: 88px 39px;
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .location-left {
+        h2 {
+            font-size: 55px;
+            line-height: 50px;
+        }
+    }
+
+    .location-right {
+        h3 {
+            font-size: 32px;
+            line-height: 32px;
+            margin-bottom: 20px;
+        }
+    
+        p {
+            font-size: 18px;
+            line-height: 28px;
+    
+            &:nth-child(2) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .our-location {
+        padding: 40px 16px;
+        grid-template-columns: 1fr;
+    }
+
+    .location-left {
+        margin-bottom: 48px;
+
+        h2 {
+            font-size: 50px;
+            line-height: 45px;
+
+            span {
+                display: inline;
+            }
+        }
+    }
+
+    .location-right {
+        h3 {
+            font-size: 32px;
+            line-height: 32px;
+            margin-bottom: 20px;
+        }
+    
+        p {
+            font-size: 18px;
+            line-height: 28px;
+    
+            &:nth-child(2) {
+                margin-bottom: 20px;
+            }
+            &:nth-child(3) {
+                margin-bottom: 24px;
+            }
+        }
     }
 }
