@@ -431,6 +431,16 @@ footer {
 .container-social {
     display: flex;
     gap: 20px;
+    
+    a {
+        svg {
+            fill: $color-white;
+
+            &:hover {
+                fill: $color-brown;
+            }
+        }
+    }
 }
 
 @media (max-width: 1190px) {
