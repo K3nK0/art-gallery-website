@@ -1,0 +1,66 @@
+.container-map {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.btn-back {
+    position: absolute;
+    height: 72px;
+    top: 0;
+    left: 156px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: transparent;
+
+    &:hover::before {
+        transform: translateX(56px);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: $color-brown;
+        width: 208px;
+        height: 100%;
+        z-index: 2;
+        left: 0;
+        transform: translateX(-152px);
+        transition: transform .3s cubic-bezier(.39,1.55,.43,.79);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: $color-black;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.arrow-left {
+    width: 56px;
+    display: grid;
+    place-items: center;
+    z-index: 5;
+}
+
+.link {
+    width: 208px;
+    display: grid;
+    place-items: center;
+    z-index: 5;
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+        font-family: "Big Shoulders Display";
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 3.636px;
+        text-transform: uppercase;
+    }
+}
